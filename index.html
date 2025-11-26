@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pantalla dividida dinámica</title>
+  <title>URL Splitter</title>
 
   <style>
     html, body {
@@ -43,6 +43,11 @@
 
 <script>
   const params = new URLSearchParams(window.location.search);
+  // title
+  const title = params.get("title") || 'URL Splitter';
+  document.title = title;
+
+  // urls
   const urlsParam = params.get("urls");
 
   if (!urlsParam) {
